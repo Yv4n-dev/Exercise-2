@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+
+<style type="text/css">
+	
+body{
+
+
+	text-align: center;
+	align-content: center;
+	align-items: center;
+	background-color: dimgray;
+	font-family:cursive,sans-serif;
+}
+
+
+.wrapper{
+
+	width: 20%;
+	height: 25%;
+	background-color:beige;
+	border-radius: 20px;
+	margin: auto;
+	align-items:center;
+	margin-top: 15%;
+	padding: 30px;
+
+}
+
+
+</style>
+
+</head>
+<body>
+
+	<div class="wrapper">
+	<h1>Login</h1>
+	<label>Username</label>
+	<input type="text" id="username" placeholder="Username" style=" margin-bottom: 10px; font-family: cursive, sans-serif;">
+	<br>
+	<label>Password</label>
+	<input type="password" id="password" placeholder="Password" style=" margin-bottom: 10px; font-family: cursive, sans-serif;">
+	<br>
+	<span id="notif"></span>
+	<br>
+	<button id="loginButton"style=" font-family: monospace; margin-bottom: 10px; margin-left:50px;" onclick="loginSystem()">Login
+		
+	</button>
+	</div>
+
+
+	<script type="text/javascript">
+		
+		function loginSystem(){
+			var correctUser ="kim123";
+			var correctPass = "123";
+
+			var typeUser = document.getElementById('username').value;
+			var typePass = document.getElementById('password').value;
+
+			if(typeUser==correctUser&&typePass==correctPass){
+				document.getElementById('notif').innerText="You are Login Successfully";
+				window.location="calculator.html";
+			}else{
+				document.getElementById('notif').innerText="Login failed!";
+
+			}
+
+		}
+	</script>
+
+</body>
+</html>
